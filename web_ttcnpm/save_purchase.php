@@ -17,11 +17,12 @@ if (isset($_SESSION['cart'])){
                 $vendor = $row['vendor'];
                 $sql_ = "INSERT INTO dishqueue (dishname, cusID, vendor, priority)
 VALUES ( '$dishname', '$cusID', '$vendor', '$priority')";
-                 $result_ = mysqli_query($conn, $sql_);
+                $result_ = mysqli_query($conn, $sql_);
             }
         }
     }
 }
+unset($_SESSION['cart']);
 
 if ($result_) {
     echo "add dish successfully";
