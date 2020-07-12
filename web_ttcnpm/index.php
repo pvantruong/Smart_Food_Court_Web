@@ -16,13 +16,16 @@ if(isset($_SESSION['id'])){
 body {font-family: Arial, Helvetica, sans-serif;}
 form {
   border: 3px solid #f1f1f1;
-  background: #E6E6E6;
+  background: white;
 	border-radius: 8px 8px 8px 8px;
 		-moz-border-radius: 8px 8px 8px 8px;
 		-webkit-border-radius: 8px 8px 8px 8px;
 	-webkit-box-shadow: #666 0px 3px 4px;
 	-moz-box-shadow: #666 0px 3px 4px;
 	box-shadow: #666 0px 3px 4px;
+  width: 50%;
+  margin-left: 25%;
+  height:450px;
   }
 
 input[type=text], input[type=password] {
@@ -68,6 +71,13 @@ img.avatar {
   padding: 16px;
 }
 
+.loginForm{
+  text-align: center;
+}
+.changeAccount{
+  margin-left:30%;
+}
+
 span.psw {
   float: right;
   padding-top: 16px;
@@ -87,11 +97,11 @@ span.psw {
 </head>
 <body>
 
-<h2>Login Form</h2>
-<a href="./cookSection/cookLogin.php"> I am a Cook</a>
+<h1 class ="loginForm">Login Form</h1>
+<h4 class="changeAccount" ><a href="./cookSection/cookLogin.php">Login with Cook Account!</a></h4>
 <form action="./cusvalid.php" method="post">
   <div class="imgcontainer">
-    <!-- <img src="img/logo.png" alt="Avatar" class="avatar"> -->
+    <img src="images/logo1.jpg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
@@ -100,16 +110,13 @@ span.psw {
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
+    <button type="submit">Login</button>
+    <span class="psw">Don't have an account?<a href="./registeration.php"> Sign Up!</a></span>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <span class="psw">Don't have an account?<a href="./registeration.php"> Make one!</a></span>
-  </div>
 </form>
 
 
