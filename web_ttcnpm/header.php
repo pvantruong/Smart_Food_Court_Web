@@ -82,7 +82,16 @@ else{
                 </a>
             </div>
         </div>
-
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav">
+                <a href="search.php" class="nav-item nav-link active">
+                    <h5 class="px-5 cart">
+                        <i class="fa fa-search" aria-hidden="true">SEARCH</i>
+                    </h5>
+                </a>
+            </div>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="mr-auto"></div>
             <div class="navbar-nav">
@@ -93,7 +102,7 @@ else{
                 </a>
             </div>
         </div>
-
+       
 
     </nav>
 </header>
