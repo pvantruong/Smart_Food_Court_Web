@@ -11,7 +11,7 @@ else{
 
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.php" class="navbar-brand">
+        <a href="home.php" class="navbar-brand">
             <h3 class="px-5">
                 BK Food Court
             </h3>
