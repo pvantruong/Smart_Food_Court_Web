@@ -46,8 +46,8 @@
         <div style="font-family: tahoma; font-size: 12px; color: green;">
 			<form action="#" method="POST">
 			<h4>Search for the name of dish you want:</h4>
-				<input type="text" name="txtSearch" placeholder="Enter your keyword..."/>
-				<input type="submit" name="btnSearch" valuer="Search"/>
+				<input class="btn" type="text" name="txtSearch" placeholder="Enter your keyword..."/>
+				<input class="btn btn-endanger" type="submit" name="btnSearch" value="Search"/>
 			</form>
 			
         </div>
