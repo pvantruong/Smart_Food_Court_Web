@@ -1,5 +1,5 @@
 <?php
-require("conection.php");
+require_once("conection.php");
 
 $sql = "SELECT * FROM menu";
 $result = mysqli_query($conn, $sql);
