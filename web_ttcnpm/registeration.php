@@ -107,7 +107,7 @@ button:hover {
 </body>
 
 <?php
-header("location:index.php");
+
 require("conection.php");
 
 $username = isset($_POST['uname']) ? $_POST['uname'] : '';
@@ -130,6 +130,7 @@ if (mysqli_num_rows($result) == 1) {
     
     if (mysqli_multi_query($conn, $sql)) {
         echo "registeration successfully";
+        header("location:index.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
