@@ -83,6 +83,18 @@ else{
             </div>
         </div>
 
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav">
+                <a href="logout.php" class="nav-item nav-link active">
+                    <h5 class="px-5 cart">
+                        <i class="fa fa-sign-out" aria-hidden="true">LOGOUT</i>
+                    </h5>
+                </a>
+            </div>
+        </div>
+
+
     </nav>
 </header>
 <!--
