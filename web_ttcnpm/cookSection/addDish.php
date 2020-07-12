@@ -9,30 +9,9 @@
     <meta name="description" content="This is the description">
     <link rel="stylesheet" href="../styles.css" />
 </head>
-        <header class="main-header">
-            <div class="up-bar">
-                <nav class="main-nav nav">
-                    <ul>
-                        <li><a href="vendor.html">VENODRS</a></li>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="search.html">SEARCH</a></li>
-                        <nav class="main-nav-login-out">
-                            <li><a href="index.html">Logout</a></li>
-                        </nav>
-                    </ul>
-                    
-                </nav>
-                
-            </div>
-            
-
-            <div class="head-display">
-                <img class="logo-BK" src="images/logo-BK.png">
-                <h1 class="band-name band-name-large">BK Food Court</h1>
-                <h3 class="name-team">Trường - Vĩ - Vũ - Hậu</h3>
-            </div>
-           
-        </header>
+        <?php
+            require_once("Cook-header.php");
+        ?>
 <body>
 <h2>Add dish</h2>
 
