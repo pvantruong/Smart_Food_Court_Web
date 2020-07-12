@@ -35,7 +35,6 @@
                     <h5 class="px-5 cart">
                         <i class="fa fa-shopping-basket"></i> Your Order
                         <?php
-                        
                         $uid = $_SESSION['id'];
                         $sql = "SELECT * FROM dishqueue WHERE cusid=$uid";
                         $result1 = mysqli_query($conn, $sql);
