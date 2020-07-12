@@ -44,7 +44,7 @@ function cartElement($productimg, $productname, $productprice, $productid, $prod
                                 <small class=\"text-secondary\">Vendor: $productvendor</small>
                                 <h5 class=\"pt-2\">$productprice VND</h5>
                                 
-                                <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\">Remove</button>
+                                <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\" formaction=\"cart.php?action=remove&id=$productid\" formmethod=\"post\">Remove</button>
                             </div>
                             <div class=\"col-md-3 py-5\">
                                 <div>
