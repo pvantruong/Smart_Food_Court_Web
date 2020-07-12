@@ -12,6 +12,9 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <style>
+    .button2 {background-color: #4CAF50;} /* Blue */
+    </style>
 </head>
 <body>
     <div class="shop-items">
@@ -22,17 +25,23 @@ $result = mysqli_query($conn, $sql);
                   while($row = mysqli_fetch_assoc($result)) {
                       
                             $name = $row['dishname'];
-                            $cusname = $row['cusname'];
+                            $vendor = $row['vendor'];
                             $time = $row['priority'];
             ?>
                         
                             <form action="./dequeue.php" method="post">
                                 <div class="cart-item cart-column">
                                     <div class="cart-item-title"><?php echo $name ?></div>
-                                    <span class="cart-item-title"><?php echo $cusname ?></span>
+                                    <span class="cart-item-title"><?php echo $vendor ?></span>
                                     <span class="cart-item-title"><?php echo $time ?></span>
                                     <input type="hidden" value=<?php echo $row['id'] ?> name="id">
-                                    <button class="btn btn-primary shop-item-button" type="submit">Finished</button>
+                                    <?php 
+                                    if ($row['process'] == 0) {
+                                        echo "<button class=\"btn btn-primary shop-item-button\" type=\"submit\">Done";
+                                    }
+                                    else{
+                                        echo "<button class=\"btn btn-primary shop-item-button button2\" type=\"submit\">Delete";
+                                    } ?></button>
                                 </div>
                             </form>
                        

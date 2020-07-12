@@ -1,19 +1,30 @@
 <?php
 
 require_once("conection.php");
-
+header("location:orderCook.php");
 
 $id = isset($_POST['id']) ? $_POST['id'] : '';
 
-$sql = "DELETE FROM `dishqueue` WHERE `dishqueue`.`id` = '$id'";
+$sql = "SELECT * FROM dishqueue WHERE id = $id";
+
 
 $result = mysqli_query($conn, $sql);
-if ($result) {
-    echo "dequeue dish successfully";
-    header("location:orderCook.php");
-} else {
+if ($row = mysqli_fetch_assoc($result)) {
+    if ($row['process'] == 0) {
+        $sqlchange = "UPDATE dishqueue
+        SET
+            process = 1
+        WHERE
+            id = $id;";
+    }
+    else if ($row['process'] == 1){
+        $sqlchange = "DELETE FROM dishqueue WHERE id = $id";
+    }
+    mysqli_query($conn, $sqlchange);
+}
+else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    header("location:dequeue.php");
+    
 }
 
 mysqli_close($conn);
