@@ -1,7 +1,14 @@
 <?php
 require_once("conection.php");
 
-$sql = "SELECT * FROM dishqueue ORDER BY priority ASC";
+$cookid = $_SESSION['id'];
+
+$sql = "SELECT vendor FROM cooks WHERE id = $cookid";
+$result = mysqli_query($conn, $sql);
+$row1 = mysqli_fetch_assoc($result);
+$vendor = $row1['vendor'];
+
+$sql = "SELECT * FROM dishqueue WHERE vendor='$vendor' ORDER BY priority ASC";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -26,7 +33,6 @@ $result = mysqli_query($conn, $sql);
                   while($row = mysqli_fetch_assoc($result)) {
                       
                             $name = $row['dishname'];
-                            $vendor = $row['vendor'];
                             $time = $row['priority'];
             ?>
                         
