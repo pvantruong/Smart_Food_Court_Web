@@ -7,7 +7,7 @@ $password = isset($_POST['psw']) ? $_POST['psw'] : '';
 
 
 
-$sql = "SELECT username, psw FROM user";
+$sql = "SELECT id, username, psw FROM user";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -15,7 +15,8 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         if($row['username'] == $username && $row['psw'] == $password){
             // Lưu Session
-            $_SESSION['name'] = $username;
+            session_start();
+            $_SESSION['name'] = $row['username'];
             $_SESSION['id'] = $row['id'];
             exit;
         }

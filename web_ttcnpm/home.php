@@ -1,5 +1,49 @@
 <?php
-require("conection.php")
+require("conection.php");
+require_once ('component.php');
+session_start();
+
+$sql = "SELECT * FROM menu";
+$result = mysqli_query($conn, $sql);
+
+
+if(isset($_POST['add']) != 0 && isset($_SESSION['id']) == 0){
+    header("Location: index.php");
+    exit;
+}
+
+if (isset($_POST['add'])){
+    /// print_r($_POST['product_id']);
+    if(isset($_SESSION['cart'])){
+
+        $item_array_id = array_column($_SESSION['cart'], "product_id");
+        
+        if(in_array($_POST['product_id'], $item_array_id)){
+            echo "<script>alert('Product is already added in the cart..!')</script>";
+            echo "<script>window.location = 'home.php'</script>";
+        }else{
+
+            $count = count($_SESSION['cart']);
+            $item_array = array(
+                'product_id' => $_POST['product_id']
+            );
+
+            $_SESSION['cart'][$count] = $item_array;
+        }
+    
+
+    }else{
+
+        $item_array = array(
+                'product_id' => $_POST['product_id']
+        );
+
+        // Create new session variable
+        $_SESSION['cart'][0] = $item_array;
+        print_r($_SESSION['cart']);
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -8,44 +52,29 @@ require("conection.php")
         <title>Home - BK Food Court</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="styles.css" />
-        <script src="store.js" async></script>
+        <!--<script src="store.js" async></script>-->     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     </head>
     <body>
-        <header class="main-header">
-            <div class="up-bar">
-                <nav class="main-nav nav">
-                    <ul>
-                        <li><a href="vendor.html">VENODRS</a></li>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="search.html">SEARCH</a></li>
-                        <nav class="main-nav-login-out">
-                            <li><a href="index.php">Logout</a></li>
-                        </nav>
-                    </ul>
-                    
-                </nav>
-                
-            </div>
-            
+        
+        <?php require_once ("header.php"); ?>
+        <div class="container">
+                <div class="row text-center py-5">
+                    <?php
+                        while ($row = mysqli_fetch_assoc($result)){
+                            component($row['dishname'], $row['price'], $row['img'], $row['id'], $row['vendor']);
+                        }
+                    ?>
+                </div>
+        </div>
 
-            <div class="head-display">
-                <img class="logo-BK" src="images/logo-BK.png">
-                <h1 class="band-name band-name-large">BK Food Court</h1>
-                <h3 class="name-team"></h3>
-            </div>
-           
-        </header>
-        <form action="purchase.php" method='post'>
-        <section class="container content-section">
-            <h2 class="section-header">Menu</h2>
-            <div class="shop-items">
-                <?php
-                    include 'displayMenu.php';
-                ?>
-            </div> 
-        </section> 
-</form>
-        <form>
+<!--
+   <form>
         <section class="container content-section">
             <h2 class="section-header">CART</h2>
             <div class="cart-row">
@@ -63,6 +92,8 @@ require("conection.php")
         
         </section>
         </form>
+-->
+     
         <footer class="main-footer">
             <div class="container main-footer-container">
                 <h3 class="band-name">BK Food Court</h3>
@@ -76,5 +107,11 @@ require("conection.php")
                 </ul>
             </div>
         </footer>
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     </body>
 </html>
