@@ -25,7 +25,7 @@
                         <li><a href="cookHome.php">HOME</a></li>
                         <li><a href="addDish.php">Add dish</a></li>
                         <nav class="main-nav-login-out">
-                            <li><a href="cookLogin.php">Logout</a></li>
+                            <li><a href="logout.php">Logout</a></li>
                         </nav>
                     </ul>
                     
