@@ -1,5 +1,11 @@
 <?php
-require("conection.php")
+require("conection.php");
+
+session_start();
+if(isset($_SESSION['id'])){
+  header("location:home.php");
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
