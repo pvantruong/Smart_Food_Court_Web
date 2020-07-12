@@ -8,7 +8,19 @@ require("conection.php")
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+form {
+  border: 3px solid #f1f1f1;
+  background: white;
+	border-radius: 8px 8px 8px 8px;
+		-moz-border-radius: 8px 8px 8px 8px;
+		-webkit-border-radius: 8px 8px 8px 8px;
+	-webkit-box-shadow: #666 0px 3px 4px;
+	-moz-box-shadow: #666 0px 3px 4px;
+	box-shadow: #666 0px 3px 4px;
+  width: 50%;
+  margin-left: 25%;
+  height:450px;
+  }
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -53,6 +65,13 @@ img.avatar {
   padding: 16px;
 }
 
+.loginForm{
+  text-align: center;
+}
+.changeAccount{
+  margin-left:30%;
+}
+
 span.psw {
   float: right;
   padding-top: 16px;
@@ -72,11 +91,11 @@ span.psw {
 </head>
 <body>
 
-<h2>Login Form</h2>
-<a href="../index.php"> Back to customer login</a>
+<h1 class ="loginForm">Login Form</h1>
+<h4 class="changeAccount" ><a href="../index.php">Back to customer login!</a></h4>
 <form action="./cookvalid.php" method="post">
   <div class="imgcontainer">
-    <!-- <img src="img/logo.png" alt="Avatar" class="avatar"> -->
+    <img src="../images/logoCook.jpg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
