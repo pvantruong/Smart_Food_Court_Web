@@ -1,5 +1,5 @@
 <?php
-require_once("conection.php");
+require("conection.php");
 
 $sql = "SELECT * FROM menu";
 $result = mysqli_query($conn, $sql);
@@ -11,7 +11,8 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bk-git/web_cnpm/web_ttcnpm/css/toggleButton.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../toggleButton.css" />
 </head>
 <body>
     <div class="shop-items">
@@ -23,18 +24,17 @@ $result = mysqli_query($conn, $sql);
                             $name = $row['dishname'];
                             $vendor = $row['vendor'];
                             $price = $row['price'];
-                            $img = $row['img'];
             ?>
                             <div class="shop-item">
                                     <span class="shop-item-title"><?php echo $name?></span>
                                     <span class="shop-item-title"><?php echo $vendor?></span>
-                                    <img class="shop-item-image" src=<?php echo $img?> >
+                                    <img class="shop-item-image" src=<?php echo $row['img']?> >
                                 <div class="shop-item-details">
                                     <span class="shop-item-price"><?php echo $price?></span>
                                     <label class="switch">
                                         <input type="checkbox" name="<?php echo $row['id']?>" value="yes" <?php if($row['Avb'] == 1){echo "Checked";} ?>>
                                         <span class="slider round"></span>
-                                        <h3><?php if($row['Avb'] == 1){echo "Enable";}else{echo "Disable";} ?></h3>
+                                        <h3>Enable</h3>
                                     </label>
                                 </div>
                             </div>

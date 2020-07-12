@@ -1,6 +1,6 @@
 <?php
 header("location:cookHome.php");
-require_once("conection.php");
+require("conection.php");
 
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';

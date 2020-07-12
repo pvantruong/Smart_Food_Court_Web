@@ -4,14 +4,31 @@
     <head>
         <title>Home - BK Food Court</title>
         <meta name="description" content="This is the description">
-        <link rel="stylesheet" href="/bk-git/web_cnpm/web_ttcnpm/css/styles.css" />
-        <link rel="stylesheet" href="/bk-git/web_cnpm/web_ttcnpm/css/toggleButton.css"/>
-        
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" href="../toggleButton.css" />
     </head>
     <body>
-        <?php
-            require_once("Cook-header.php");
-        ?>
+        <header class="main-header">
+            <div class="up-bar">
+                <nav class="main-nav nav">
+                    <ul>
+                        <a href="orderCook.php" class="notification">
+                            <span>Order</span>
+                            <span class="badge">0</span>
+                        </a>
+                        <li><a href="vendor.php">VENODRS</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="login.php">Logout</a></li>
+                    </ul>
+                </nav>  
+            </div>
+            
+            <div class="head-display">
+                <img class="logo-BK" src="../images/logo-BK.png">
+                <h1 class="band-name band-name-large">BK Food Court</h1>
+                <h3 class="name-team">Trường - Vĩ - Vũ - Hậu</h3>
+            </div>
+        </header>
 
         <section class="container content-section">
             <h2 class="section-header">QUEUE</h2>
@@ -29,7 +46,7 @@
                     
                     <li>
                         <a href="https://www.facebook.com" target="_blank">
-                            <img src="Images/Facebook Logo.png">
+                            <img src="../Images/Facebook Logo.png">
                         </a>
                     </li>
                 </ul>

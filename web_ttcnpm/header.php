@@ -46,8 +46,8 @@ else{
                     <h5 class="px-5 cart">
                         <i class="fa fa-shopping-basket"></i> Your Order
                         <?php
-                        if ($uid) {
-                                $sql = "SELECT * FROM dishqueue WHERE cusid=$uid";
+                        if($uid){
+                            $sql = "SELECT * FROM dishqueue WHERE cusid=$uid";
                             $result1 = mysqli_query($conn, $sql);
                             $count = mysqli_num_rows($result1);
                             if ($count > 0){
@@ -56,8 +56,6 @@ else{
                                 echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
                             }
                         }
-                    
-
                         ?>
                     </h5>
                 </a>

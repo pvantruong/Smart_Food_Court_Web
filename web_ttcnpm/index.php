@@ -73,7 +73,7 @@ span.psw {
 <body>
 
 <h2>Login Form</h2>
-<a href="cookSection/cookLogin.php"> I am a Cook</a>
+<a href="./cookSection/cookLogin.php"> I am a Cook</a>
 <form action="./cusvalid.php" method="post">
   <div class="imgcontainer">
     <!-- <img src="img/logo.png" alt="Avatar" class="avatar"> -->

@@ -35,7 +35,7 @@
             
 
             <div class="head-display">
-                <img class="logo-BK" src="/bk-git/web_cnpm/web_ttcnpm/images/logo-BK.png">
+                <img class="logo-BK" src="../images/logo-BK.png">
                 <h1 class="band-name band-name-large">BK Food Court </h1>
                 <h3 class="name-team">Hello, cooker <?php
                 if(isset($_SESSION['id'])){

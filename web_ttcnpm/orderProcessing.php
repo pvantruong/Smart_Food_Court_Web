@@ -33,7 +33,6 @@ $result = mysqli_query($conn, $sql);
     <?php
         require_once("header.php");
     ?>
-    <div class="shop-items">
             <?php
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
@@ -45,11 +44,17 @@ $result = mysqli_query($conn, $sql);
             ?>
                     
                     
-                        <div class="cart-item cart-column">
-                                    <div class="cart-item-title"><?php echo $name ?></div>
-                                    <span class="cart-item-title"><?php echo $vendor ?></span>
+                    <div class="container-fluid">
+                    <div class="row px-5">
+                    <div class="col-md-7">
+                    <div class="shopping-cart">
+                                    <h1 class="pt-2"><?php echo $name ?></h1>
+                                    <medium class="text-secondary">Vendor: <?php echo $vendor ?></medium>
                                     <span class="cart-item-title"><?php if($process == 1) {echo "<h4 style=\"color:#FF0000;\">~~READY~~</h4>";} else{echo "<h4>Processing...</h4>";} ?></span>
-                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
 
     
             <?php
@@ -58,7 +63,6 @@ $result = mysqli_query($conn, $sql);
                   echo "No food is processing";
               }
             ?>
-    </div>
     
 </body>
 </html>
