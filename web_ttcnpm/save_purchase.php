@@ -11,13 +11,12 @@ if (isset($_SESSION['cart'])){
             if ($row['id'] == $id){
                 // cartElement($row['img'], $row['dishname'],$row['price'], $row['id'], $row['vendor']);
                 // $total = $total + (int)$row['price'];
-                $id = $row['id'];
                 $dishname = $row['dishname'];
                 $cusID = $_SESSION['id'];
                 $priority = date("h:i:s");
                 $vendor = $row['vendor'];
-                $sql_ = "INSERT INTO dishqueue (id, dishname, cusID, vendor, priority)
-VALUES ('$id', '$dishname', '$cusID', '$vendor', '$priority')";
+                $sql_ = "INSERT INTO dishqueue (dishname, cusID, vendor, priority)
+VALUES ( '$dishname', '$cusID', '$vendor', '$priority')";
                  $result_ = mysqli_query($conn, $sql_);
             }
         }
