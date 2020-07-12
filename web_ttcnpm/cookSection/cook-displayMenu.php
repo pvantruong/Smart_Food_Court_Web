@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql);
                             <div class="shop-item">
                                     <span class="shop-item-title"><?php echo $name?></span>
                                     <span class="shop-item-title"><?php echo $vendor?></span>
-                                    <img class="shop-item-image" src=<?php echo $row['img']?> >
+                                    <img class="shop-item-image" src="../<?php echo $row['img']?>" >
                                 <div class="shop-item-details">
                                     <span class="shop-item-price"><?php echo $price?></span>
                                     <label class="switch">
