@@ -14,7 +14,16 @@ if(isset($_SESSION['id'])){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+form {
+  border: 3px solid #f1f1f1;
+  background: #E6E6E6;
+	border-radius: 8px 8px 8px 8px;
+		-moz-border-radius: 8px 8px 8px 8px;
+		-webkit-border-radius: 8px 8px 8px 8px;
+	-webkit-box-shadow: #666 0px 3px 4px;
+	-moz-box-shadow: #666 0px 3px 4px;
+	box-shadow: #666 0px 3px 4px;
+  }
 
 input[type=text], input[type=password] {
   width: 100%;
