@@ -1,3 +1,14 @@
+<?php
+$uid = isset($_SESSION['id']) ? $_SESSION['id'] : '';
+if (!$uid) {
+    $processEvent = "index.php";
+    # code...
+}
+else{
+    $processEvent = "orderProcessing.php";
+}
+?>
+
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a href="index.php" class="navbar-brand">
@@ -31,19 +42,21 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="mr-auto"></div>
             <div class="navbar-nav">
-                <a href="orderProcessing.php" class="nav-item nav-link active">
+                <a href=<?php echo $processEvent ?> class="nav-item nav-link active">
                     <h5 class="px-5 cart">
                         <i class="fa fa-shopping-basket"></i> Your Order
                         <?php
-                        $uid = $_SESSION['id'];
-                        $sql = "SELECT * FROM dishqueue WHERE cusid=$uid";
-                        $result1 = mysqli_query($conn, $sql);
-                        $count = mysqli_num_rows($result1);
-                        if ($count > 0){
-                            echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
-                        }else{
-                            echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                        if ($uid) {
+                                $sql = "SELECT * FROM dishqueue WHERE cusid=$uid";
+                            $result1 = mysqli_query($conn, $sql);
+                            $count = mysqli_num_rows($result1);
+                            if ($count > 0){
+                                echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
+                            }else{
+                                echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                            }
                         }
+                    
 
                         ?>
                     </h5>

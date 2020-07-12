@@ -24,7 +24,6 @@ if ($row = mysqli_fetch_assoc($result)) {
 }
 else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    
 }
 
 mysqli_close($conn);

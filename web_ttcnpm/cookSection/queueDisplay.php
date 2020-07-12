@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <style>
-    .button2 {background-color: #4CAF50;} /* Blue */
+    .button2 {background-color: #FF0000;} /* Red */
     </style>
 </head>
 <body>
