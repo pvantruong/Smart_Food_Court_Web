@@ -21,7 +21,7 @@
   <label for="vendor">Vendor:</label><br>
   <input type="text" id="vendor" name="vendor" placeholder="vendor of dish"><br>
   <label for="price">Price:</label><br>
-  <input type="int" id="price" name="price" placeholder="price of dish"><br><br>
+  <input type="text" id="price" name="price" placeholder="price of dish"><br><br>
   <button type="submit" formaction="addDishmodel.php" formmethod="post" onclick="alert('Menu changed')" >UPDATE</button>
 </form>
 
