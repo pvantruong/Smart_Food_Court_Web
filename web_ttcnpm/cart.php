@@ -43,69 +43,69 @@ if (isset($_POST['remove'])){
 <?php
     require_once ('header.php');
 ?>
+<form action="save_purchase.php" method="POST">
+    <div class="container-fluid">
+        <div class="row px-5">
+            <div class="col-md-7">
+                <div class="shopping-cart">
+                    <h6>My Cart</h6>
+                    <hr>
 
-<div class="container-fluid">
-    <div class="row px-5">
-        <div class="col-md-7">
-            <div class="shopping-cart">
-                <h6>My Cart</h6>
-                <hr>
+                    <?php
 
-                <?php
-
-                $total = 0;
-                    if (isset($_SESSION['cart'])){
-                        $product_id = array_column($_SESSION['cart'], 'product_id');
-                        while ($row = mysqli_fetch_assoc($result)){
-                            foreach ($product_id as $id){
-                                if ($row['id'] == $id){
-                                    cartElement($row['img'], $row['dishname'],$row['price'], $row['id'], $row['vendor']);
-                                    $total = $total + (int)$row['price'];
+                    $total = 0;
+                        if (isset($_SESSION['cart'])){
+                            $product_id = array_column($_SESSION['cart'], 'product_id');
+                            while ($row = mysqli_fetch_assoc($result)){
+                                foreach ($product_id as $id){
+                                    if ($row['id'] == $id){
+                                        cartElement($row['img'], $row['dishname'],$row['price'], $row['id'], $row['vendor']);
+                                        $total = $total + (int)$row['price'];
+                                    }
                                 }
                             }
+                        }else{
+                            echo "<h5>Cart is Empty</h5>";
                         }
-                    }else{
-                        echo "<h5>Cart is Empty</h5>";
-                    }
 
-                ?>
+                    ?>
+
+                </div>
+            </div>
+            <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
+
+                <div class="pt-4">
+                    
+            
+                    <div class="row price-details">
+                    <div class="col-md-6">Number of dishes: </div>
+                        <div class="col-md-6">
+                            <?php
+                                if (isset($_SESSION['cart'])){
+                                    $count  = count($_SESSION['cart']);
+                                    echo "<h6> $count (dishes)</h6>";
+                                }else{
+                                    echo "<h6>0 (dishes)</h6>";
+                                }
+                            ?>
+                        </div>
+                    
+                    </div>
+                    <hr>
+                    <div class="row price-details">
+                        <div class="col-md-6">Total of payment: </div>    
+                        <div class="col-md-6">
+                            <h6><?php echo $total; ?> VND</h6>
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-warning">PAY</button>
+                </div>
 
             </div>
-        </div>
-        <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
-
-            <div class="pt-4">
-                
-          
-                <div class="row price-details">
-                <div class="col-md-6">Number of dishes: </div>
-                    <div class="col-md-6">
-                        <?php
-                            if (isset($_SESSION['cart'])){
-                                $count  = count($_SESSION['cart']);
-                                echo "<h6> $count (dishes)</h6>";
-                            }else{
-                                echo "<h6>0 (dishes)</h6>";
-                            }
-                        ?>
-                    </div>
-                   
-                </div>
-                <hr>
-                <div class="row price-details">
-                    <div class="col-md-6">Total of payment: </div>    
-                    <div class="col-md-6">
-                        <h6><?php echo $total; ?> VND</h6>
-                    </div>
-                </div>
-                <hr>
-                <button type="submit" class="btn btn-warning">PAY</button>
-            </div>
-
         </div>
     </div>
-</div>
-
+</form>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
