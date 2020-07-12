@@ -12,6 +12,7 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+
     <style>
     .button2 {background-color: #FF0000;} /* Red */
     </style>
@@ -30,19 +31,26 @@ $result = mysqli_query($conn, $sql);
             ?>
                         
                             <form action="./dequeue.php" method="post">
-                                <div class="cart-item cart-column">
-                                    <div class="cart-item-title"><?php echo $name ?></div>
-                                    <span class="cart-item-title"><?php echo $vendor ?></span>
-                                    <span class="cart-item-title"><?php echo $time ?></span>
+                               
+                                    
+                                        
+                                        
+                                            <h1 class="pt-2"><?php echo $name ?></h1>
+                                            <medium class="text-secondary">Vendor: <?php echo $vendor ?></medium>
+                                            <medium class="text-secondary"> --- Time: <?php echo $time ?></medium>
+                                            <?php 
+                                                if ($row['process'] == 0) {
+                                                    echo "<button class=\"btn btn-primary shop-item-button\" type=\"submit\">Done";
+                                                }
+                                                else{
+                                                    echo "<button class=\"btn btn-primary shop-item-button button2\" type=\"submit\">Delete";
+                                                } 
+                                            ?></button>
+                                      
+                            
+                     
+                                    
                                     <input type="hidden" value=<?php echo $row['id'] ?> name="id">
-                                    <?php 
-                                    if ($row['process'] == 0) {
-                                        echo "<button class=\"btn btn-primary shop-item-button\" type=\"submit\">Done";
-                                    }
-                                    else{
-                                        echo "<button class=\"btn btn-primary shop-item-button button2\" type=\"submit\">Delete";
-                                    } ?></button>
-                                </div>
                             </form>
                        
                         
