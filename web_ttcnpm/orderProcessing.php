@@ -48,8 +48,10 @@ $result = mysqli_query($conn, $sql);
                     
                         <div class="cart-item cart-column">
                                     <div class="cart-item-title"><span class="item-sc"><?php echo $name; ?></span></div>
-                                    <span class="cart-item-title item-sc"><?php echo $vendor ?></span>
-                                    
+                                    <span class="cart-item-title item-sc">-<?php echo $vendor ?>-</span>
+                                    <div class="pro-nav">
+			<span class="cart-item-title"><?php if($process == 1) {echo "<h4 style=\"color:#FF0000;\">~~READY~~</h4>";} else{echo '<h4><span class="pro">Processing...</span></h4>';} ?></span>
+                                    </div>                        
                         </div>
 
     
@@ -60,8 +62,6 @@ $result = mysqli_query($conn, $sql);
               }
             ?>
     </div>
-    <div class="pro-nav">
-			<span class="cart-item-title"><?php if($process == 1) {echo "<h4 style=\"color:#FF0000;\">~~READY~~</h4>";} else{echo '<h4><span class="pro">Processing...</span></h4>';} ?></span>
-			</div>
+    
 </body>
 </html>
