@@ -58,7 +58,7 @@ $result = mysqli_query($conn, $sql);
             <?php
                 }
               }   else {
-                  echo "No food is processing";
+                  echo "<h1>No food is processing</h1>";
               }
             ?>
     </div>
