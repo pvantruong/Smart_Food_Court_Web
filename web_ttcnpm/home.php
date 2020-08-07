@@ -67,7 +67,9 @@ if (isset($_POST['add'])){
                 <div class="row text-center py-5">
                     <?php
                         while ($row = mysqli_fetch_assoc($result)){
+                            if($row['Avb'] == 1){
                             component($row['dishname'], $row['price'], $row['img'], $row['id'], $row['vendor']);
+                            }
                         }
                     ?>
                 </div>
