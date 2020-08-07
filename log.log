@@ -1,0 +1,608 @@
+commit c69c5db5dd044b82261b9231b65e845ddf2231a1
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 23:10:07 2020 +0700
+
+    Update search
+
+ web_ttcnpm/search.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 988667b071fad8c1601d71d2d11247b87e634103
+Merge: 8a0a2b3 62cf0ff
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 22:53:45 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 8a0a2b3009483e6bd83eab2a19041577ee4f9493
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 22:53:20 2020 +0700
+
+    Add search engine
+    
+    Add search engine
+
+ web_ttcnpm/header.php | 13 ++++++--
+ web_ttcnpm/search.php | 86 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 97 insertions(+), 2 deletions(-)
+
+commit 62cf0ffd010bed8b2c69de4d9138274ad62f64e9
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 22:50:17 2020 +0700
+
+    Update addDish.php
+
+ web_ttcnpm/cookSection/addDish.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4f74538cca434e5e8b989b18d02352e8e015994c
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 22:45:39 2020 +0700
+
+    update logout for cook
+    
+    and also del the unnecessary
+
+ web_ttcnpm/cookSection/Cook-header.php |   2 +-
+ web_ttcnpm/cookSection/logout.php      |   6 ++
+ web_ttcnpm/images/orderDish.js         |   6 --
+ web_ttcnpm/nguyenvi.sql                | 186 ---------------------------------
+ web_ttcnpm/search.html                 |  46 --------
+ web_ttcnpm/store.js                    | 110 -------------------
+ web_ttcnpm/vendor.html                 | 111 --------------------
+ 7 files changed, 7 insertions(+), 460 deletions(-)
+
+commit 08fc9cdec804da63255ca3585db3f428391ab0b5
+Merge: b425e09 fea6ea4
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 22:37:55 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit b425e09cdb0bd894f97c2019523f1bd8a4dfd9ff
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 22:36:50 2020 +0700
+
+    logout func
+
+ web_ttcnpm/header.php | 12 ++++++++++++
+ web_ttcnpm/logout.php |  6 ++++++
+ 2 files changed, 18 insertions(+)
+
+commit fea6ea4cf1f6c0d8bcade5cb5d5a1dc296d0c040
+Merge: 35e6cfd 56ae25b
+Author: vuprodtkt <68179122+vuprodtkt@users.noreply.github.com>
+Date:   Sun Jul 12 22:34:03 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 35e6cfd7c316feb5e4950608438ed0cf4d63cab0
+Author: vuprodtkt <68179122+vuprodtkt@users.noreply.github.com>
+Date:   Sun Jul 12 22:33:42 2020 +0700
+
+    chỉnh sửa cook login
+
+ web_ttcnpm/cookSection/cookLogin.php |  27 +++++++++++++++++++++++----
+ web_ttcnpm/images/logo1.jpg          | Bin 0 -> 68380 bytes
+ web_ttcnpm/images/logo1.lnk          | Bin 2724 -> 0 bytes
+ web_ttcnpm/images/logoCook.jpg       | Bin 0 -> 39404 bytes
+ web_ttcnpm/images/logoCook.lnk       | Bin 1658 -> 0 bytes
+ web_ttcnpm/index.php                 |  25 ++++++++++++++++---------
+ 6 files changed, 39 insertions(+), 13 deletions(-)
+
+commit 56ae25b288aaedd5503ea99e460a47058624a691
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 22:25:15 2020 +0700
+
+    create cook user section and display the queue only by their vendor
+    
+    great, right ?
+
+ web_ttcnpm/cookSection/cookvalid.php    |  5 ++++-
+ web_ttcnpm/cookSection/queueDisplay.php | 10 ++++++++--
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+commit a29e0e66511a6b61b65d112dc25febdd00f6f5c5
+Author: vuprodtkt <68179122+vuprodtkt@users.noreply.github.com>
+Date:   Sun Jul 12 22:18:15 2020 +0700
+
+    chỉnh sửa index.php
+
+ web_ttcnpm/images/logo1.lnk    | Bin 0 -> 2724 bytes
+ web_ttcnpm/images/logoCook.lnk | Bin 0 -> 1658 bytes
+ web_ttcnpm/index.php           |  11 ++++++++++-
+ 3 files changed, 10 insertions(+), 1 deletion(-)
+
+commit 59c6d2581bc2fcd7d906af994d9e27310547cc81
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:54:26 2020 +0700
+
+    Update food-1932466_1920.jpg
+
+ web_ttcnpm/images/food-1932466_1920.jpg | Bin 914301 -> 323685 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fc7581ae53336b96499babf32fa7de2bb20c4431
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:52:40 2020 +0700
+
+    Update orderprocessing
+
+ web_ttcnpm/css/styles.css      | 2 +-
+ web_ttcnpm/orderProcessing.php | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit f03b6df53b5a8d7b4181a321a433c980cde9f771
+Merge: 1758d03 610c2d0
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:49:19 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 1758d032e490965640a19ad472addddc6af184bf
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:47:28 2020 +0700
+
+    Update food-1932466_1920.jpg
+
+ web_ttcnpm/images/food-1932466_1920.jpg | Bin 963581 -> 914301 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 610c2d027c6dcde4f2cefbc0e50b75398ee6103a
+Merge: 1c6c43f 518127f
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 21:46:03 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 1c6c43fba4845031741ef96008483436557915b4
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 21:45:56 2020 +0700
+
+    Update index.php
+    
+    Fix re_go to login
+
+ web_ttcnpm/index.php | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit 518127f5b9cb20f65edaf9b90ad7aaeda7f5df13
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:43:52 2020 +0700
+
+    Update orderProcessing.php
+
+ web_ttcnpm/orderProcessing.php | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit 04b750506c102db7beae0ad9c1b6371c8a5f4399
+Author: NguyenAnhVi <68179230+NguyenAnhVi@users.noreply.github.com>
+Date:   Sun Jul 12 21:35:53 2020 +0700
+
+    fix
+
+ web_ttcnpm/orderProcessing.php | 49 ++++++++++++++++++++++++------------------
+ 1 file changed, 28 insertions(+), 21 deletions(-)
+
+commit a759e1b55ff9e494036cc7a4761f5a0657c488ab
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:32:35 2020 +0700
+
+    Update cook-displayMenu.php
+
+ web_ttcnpm/cookSection/cook-displayMenu.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f43d9ebed0959de0728e80ec4ae30506156769d6
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:23:57 2020 +0700
+
+    Update save_purchase.php
+
+ web_ttcnpm/save_purchase.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 4da223f8b77456599693f5e9c72e0b6826bd196e
+Merge: b60004a 57aa6ae
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:15:03 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit b60004aee171a73edb5106e0ec5e2cb64bb589a1
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:12:38 2020 +0700
+
+    Update save_purchase.php
+
+ web_ttcnpm/save_purchase.php | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+commit 57aa6aed1a4db05f112a3cb2c86208349f68eaf0
+Author: NguyenAnhVi <68179230+NguyenAnhVi@users.noreply.github.com>
+Date:   Sun Jul 12 21:08:51 2020 +0700
+
+    make likely
+
+ web_ttcnpm/css/styles.css               | 606 ++++++++++++++++++++++++++++++++
+ web_ttcnpm/images/food-1932466_1920.jpg | Bin 0 -> 963581 bytes
+ web_ttcnpm/orderProcessing.php          |  42 +--
+ 3 files changed, 623 insertions(+), 25 deletions(-)
+
+commit 81f0b7eac2609271d0909bb70cb7bad1530eb3c2
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:01:40 2020 +0700
+
+    Update header.php
+
+ web_ttcnpm/header.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 83acacdc90e7bcf86cd89cfc5a0467e70b2a7633
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 21:00:21 2020 +0700
+
+    Update component.php
+
+ web_ttcnpm/component.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7df4dbf165b8777648226b7faea2a10dcd992602
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 20:45:27 2020 +0700
+
+    fix add many dish
+
+ web_ttcnpm/home.php | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit 5818289735e72bd74e19cf954cd862cfa811d1d6
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 20:17:41 2020 +0700
+
+    Get the navbar back
+    
+    Yeah, like time travel right ?
+
+ web_ttcnpm/cookSection/addDish.php   | 27 +++------------------------
+ web_ttcnpm/cookSection/orderCook.php | 25 +++----------------------
+ 2 files changed, 6 insertions(+), 46 deletions(-)
+
+commit a0fd76ea26098ab55a743fcefe40598e00967b60
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 20:16:09 2020 +0700
+
+    Fix double homepage
+    
+    WTF is that ?
+
+ web_ttcnpm/cookSection/cookHome.php | 76 +------------------------------------
+ 1 file changed, 1 insertion(+), 75 deletions(-)
+
+commit f3fef71b721a078c57d71a0480da19a040f02c1b
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 20:13:23 2020 +0700
+
+    Fix absolute link
+    
+    my bad to get the absolute link instead of relative link
+
+ web_ttcnpm/BKbgr.jpg                        | Bin 0 -> 277497 bytes
+ web_ttcnpm/avatar.png                       | Bin 0 -> 3450 bytes
+ web_ttcnpm/cookSection/Cook-header.php      |   2 +-
+ web_ttcnpm/cookSection/addDish.php          |  35 ++++++++++---
+ web_ttcnpm/cookSection/addDishmodel.php     |   2 +-
+ web_ttcnpm/cookSection/cook-displayMenu.php |  10 ++--
+ web_ttcnpm/cookSection/cookHome.php         |  78 +++++++++++++++++++++++++++-
+ web_ttcnpm/cookSection/cookvalid.php        |  12 ++---
+ web_ttcnpm/cookSection/dequeue.php          |   1 +
+ web_ttcnpm/cookSection/orderCook.php        |  31 ++++++++---
+ web_ttcnpm/cookSection/queueDisplay.php     |   4 +-
+ web_ttcnpm/css/styleIndex.css               |   2 +-
+ web_ttcnpm/header.php                       |   6 +--
+ web_ttcnpm/images/BKbgr.jpg                 | Bin 0 -> 277497 bytes
+ web_ttcnpm/images/{pic01.png => pic01.jpg}  | Bin
+ web_ttcnpm/images/{pic02.png => pic02.jpg}  | Bin
+ web_ttcnpm/images/{pic03.png => pic03.jpg}  | Bin
+ web_ttcnpm/index.php                        |   2 +-
+ web_ttcnpm/js/checkLogin.js                 |  25 ---------
+ web_ttcnpm/js/orderDish.js                  |   7 ---
+ web_ttcnpm/orderProcessing.php              |  16 +++---
+ web_ttcnpm/{css => }/styleLogin.css         |   2 +-
+ web_ttcnpm/{css => }/styles.css             |   2 +-
+ web_ttcnpm/{css => }/toggleButton.css       |   0
+ 24 files changed, 156 insertions(+), 81 deletions(-)
+
+commit ebd168ffdeddc13d4cbf6647967898c786fd9d19
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 17:42:26 2020 +0700
+
+    save_purchase adjust
+    
+    Realize we do not need price in dishqueue
+
+ web_ttcnpm/cart.php          | 2 +-
+ web_ttcnpm/save_purchase.php | 5 ++---
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+commit a7987cdf9e592b1fb0deecd354d9506d9590be35
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 17:11:38 2020 +0700
+
+    Update dish queue
+    
+    More clearly view for cook to view dishes
+
+ web_ttcnpm/cookSection/orderCook.php    |   1 +
+ web_ttcnpm/cookSection/queueDisplay.php |  32 ++++++++++++++++++++------------
+ web_ttcnpm/images/Band Members.png      | Bin 11249104 -> 0 bytes
+ web_ttcnpm/images/bk-bgr.png            | Bin 1477607 -> 1442298 bytes
+ web_ttcnpm/images/logo.jpg              | Bin 63189 -> 0 bytes
+ 5 files changed, 21 insertions(+), 12 deletions(-)
+
+commit 95418e2798ba7117ea2273e2396c109b9ace3ee6
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 16:52:07 2020 +0700
+
+    Update Navbar
+    
+    Make navbar of cook more clearly and notify the number of dish in queue
+
+ web_ttcnpm/cookSection/Cook-header.php | 26 +++++++++++++++++++++---
+ web_ttcnpm/cookSection/addDish.php     |  2 ++
+ web_ttcnpm/cookSection/cookHome.php    | 37 +++-------------------------------
+ 3 files changed, 28 insertions(+), 37 deletions(-)
+
+commit 0d54ee024d8b0ce2c0158cbfce5f6b0070a8cfb4
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 16:36:58 2020 +0700
+
+    Update db
+    
+    Update my changed db for everyone to keep track
+
+ web_ttcnpm/nguyenvi.sql | 186 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 186 insertions(+)
+
+commit 1cc0bbe908cd386ff4e3f0bf7c2aa9bb956ecb36
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 16:34:25 2020 +0700
+
+    Group all the func of Cook
+    
+    I get all the cook interactive file to a folder for easy looking (change all their reference)
+
+ web_ttcnpm/BKbgr.jpg                              |  Bin 277497 -> 0 bytes
+ web_ttcnpm/addDish.php                            |   50 -
+ web_ttcnpm/avatar.png                             |  Bin 3450 -> 0 bytes
+ web_ttcnpm/cookSection/Cook-header.php            |   28 +
+ web_ttcnpm/cookSection/addDish.php                |   29 +
+ web_ttcnpm/{ => cookSection}/addDishmodel.php     |   44 +-
+ web_ttcnpm/cookSection/conection.php              |   13 +
+ web_ttcnpm/{ => cookSection}/cook-displayMenu.php |  100 +-
+ web_ttcnpm/{ => cookSection}/cookHome.php         |  144 +--
+ web_ttcnpm/{ => cookSection}/cookLogin.php        |  194 ++--
+ web_ttcnpm/{ => cookSection}/cookvalid.php        |   54 +-
+ web_ttcnpm/{ => cookSection}/dequeue.php          |    1 -
+ web_ttcnpm/{ => cookSection}/menuModel.php        |   68 +-
+ web_ttcnpm/cookSection/orderCook.php              |   38 +
+ web_ttcnpm/{ => cookSection}/queueDisplay.php     |    2 +-
+ web_ttcnpm/css/styleIndex.css                     |    2 +-
+ web_ttcnpm/{ => css}/styleLogin.css               |  116 +-
+ web_ttcnpm/{ => css}/styles.css                   | 1182 ++++++++++-----------
+ web_ttcnpm/{ => css}/toggleButton.css             |  164 +--
+ web_ttcnpm/header.php                             |   31 +-
+ web_ttcnpm/images/BKbgr.jpg                       |  Bin 277497 -> 0 bytes
+ web_ttcnpm/images/{pic01.jpg => pic01.png}        |  Bin
+ web_ttcnpm/images/{pic02.jpg => pic02.png}        |  Bin
+ web_ttcnpm/images/{pic03.jpg => pic03.png}        |  Bin
+ web_ttcnpm/index.php                              |    2 +-
+ web_ttcnpm/orderCook.php                          |   57 -
+ 26 files changed, 1170 insertions(+), 1149 deletions(-)
+
+commit 3e52fc3af391fcb6fc6fb3e96a6f003d356a6570
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 15:21:32 2020 +0700
+
+    Update order processing interface
+    
+    Get a few color and style for it
+
+ web_ttcnpm/header.php          |  1 -
+ web_ttcnpm/orderProcessing.php | 18 ++++++++++++++----
+ 2 files changed, 14 insertions(+), 5 deletions(-)
+
+commit 04d437f05a1ddbd2b3b64fca7fc8af9ce99cb7a3
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 15:04:15 2020 +0700
+
+    Add a link to see order processing
+    
+    Customer now can see which order of them is processing
+
+ web_ttcnpm/header.php     | 24 ++++++++++++++++++
+ web_ttcnpm/orderCook.html | 62 -----------------------------------------------
+ 2 files changed, 24 insertions(+), 62 deletions(-)
+
+commit ebdd651d0f76caf733f79b1b71f9ea43047dc3a8
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 14:10:05 2020 +0700
+
+    Add queue func for cook
+    
+    Cook now can view queue and process the queue
+
+ web_ttcnpm/dequeue.php         | 25 +++++++++++++------
+ web_ttcnpm/orderProcessing.php | 54 ++++++++++++++++++++++++++++++++++++++++++
+ web_ttcnpm/queueDisplay.php    | 15 +++++++++---
+ 3 files changed, 84 insertions(+), 10 deletions(-)
+
+commit 4d2c5df8d1fda7fe7166f07bd86534f82cf91453
+Merge: b053a6d 358bc72
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 12:23:29 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit b053a6d5ded9f4fb16e9d5ff1e05911f09b5343b
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 12:22:00 2020 +0700
+
+    add save_purchase.php
+
+ web_ttcnpm/cart.php          | 102 +++++++++++++++++++++----------------------
+ web_ttcnpm/home.php          |   2 +-
+ web_ttcnpm/save_purchase.php |  41 +++++++++++++++++
+ 3 files changed, 93 insertions(+), 52 deletions(-)
+
+commit 358bc72fa1624fa97406286d14b4dde6b697f6d1
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 12:05:23 2020 +0700
+
+    Update displayMenu.php
+
+ web_ttcnpm/displayMenu.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6cc0e344e7a239f49b681c803441f32812b34d0f
+Merge: 8f270d1 0bc72be
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 10:05:54 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 8f270d1d49d844ee5f2185de798f615a5b9d6349
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 10:05:28 2020 +0700
+
+    Add queue display
+    
+    add queue display and func for cook to finish the dish
+
+ .gitignore                  |  2 ++
+ web_ttcnpm/conection.php    |  4 ++--
+ web_ttcnpm/dequeue.php      | 20 ++++++++++++++++
+ web_ttcnpm/orderCook.php    | 57 +++++++++++++++++++++++++++++++++++++++++++++
+ web_ttcnpm/purchase.php     | 28 ----------------------
+ web_ttcnpm/queueDisplay.php | 51 ++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 132 insertions(+), 30 deletions(-)
+
+commit 0bc72bea5b126f06c07e7f248e6dd7eb74be1e01
+Merge: 2faf48c 9d2d74e
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 09:51:30 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 2faf48c7e06ac1704ccf38eb4d3c4e55f21a8663
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 09:50:16 2020 +0700
+
+    Edit cookvalid.php
+
+ web_ttcnpm/cookvalid.php | 16 +++++-----------
+ 1 file changed, 5 insertions(+), 11 deletions(-)
+
+commit 9d2d74e2c3220604632f26b21021103bebb44740
+Merge: 4012951 f69dc86
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 09:39:52 2020 +0700
+
+    Merge branch 'master' of https://github.com/pvantruong/web_cnpm
+
+commit 40129517d094d08f79678fcab3c4061f9da3fac7
+Author: Vix-Nguyen <59189226+Vix-Nguyen@users.noreply.github.com>
+Date:   Sun Jul 12 09:39:24 2020 +0700
+
+    Delete orderCook.js
+
+ web_ttcnpm/orderCook.js | 36 ------------------------------------
+ 1 file changed, 36 deletions(-)
+
+commit f69dc865052537074b062153655f888e98483df3
+Author: Phan Văn Trường <truongfct.040920@gmail.com>
+Date:   Sun Jul 12 09:27:12 2020 +0700
+
+    Add cart.php, component.php, header.php, edit home.php, styles.css
+
+ web_ttcnpm/cart.php      | 137 ++++++++++++++++++++++++++++++++++-------------
+ web_ttcnpm/component.php |  62 +++++++++++++++++++++
+ web_ttcnpm/cookvalid.php |  16 ++++--
+ web_ttcnpm/cusvalid.php  |   5 +-
+ web_ttcnpm/header.php    |  84 +++++++++++++++++++++++++++++
+ web_ttcnpm/home.php      | 109 ++++++++++++++++++++++++-------------
+ web_ttcnpm/styles.css    |  24 +++++++++
+ 7 files changed, 358 insertions(+), 79 deletions(-)
+
+commit f80a67618aae62f272af2d3dcbda326d7970771a
+Author: Phan Van Truong <60886507+pvantruong@users.noreply.github.com>
+Date:   Fri Jul 10 21:12:17 2020 +0700
+
+    Add files via upload
+    
+    Upload full files
+
+ web_ttcnpm/BKbgr.jpg                      | Bin 0 -> 277497 bytes
+ web_ttcnpm/Fonts/Booter - Zero Zero.woff  | Bin 0 -> 38828 bytes
+ web_ttcnpm/Fonts/Booter - Zero Zero.woff2 | Bin 0 -> 30880 bytes
+ web_ttcnpm/Fonts/HussarBoldWeb-bf92.woff  | Bin 0 -> 124652 bytes
+ web_ttcnpm/addDish.php                    |  50 +++
+ web_ttcnpm/addDishmodel.php               |  23 ++
+ web_ttcnpm/avatar.png                     | Bin 0 -> 3450 bytes
+ web_ttcnpm/cart.php                       |  50 +++
+ web_ttcnpm/conection.php                  |  13 +
+ web_ttcnpm/cook-displayMenu.php           |  51 +++
+ web_ttcnpm/cookHome.php                   |  72 ++++
+ web_ttcnpm/cookLogin.php                  |  98 ++++++
+ web_ttcnpm/cookvalid.php                  |  25 ++
+ web_ttcnpm/css/styleHome.css              |  89 +++++
+ web_ttcnpm/css/styleIndex.css             |  59 ++++
+ web_ttcnpm/cusvalid.php                   |  30 ++
+ web_ttcnpm/displayMenu.php                |  50 +++
+ web_ttcnpm/home.php                       |  80 +++++
+ web_ttcnpm/images/BKbgr.jpg               | Bin 0 -> 277497 bytes
+ web_ttcnpm/images/Band Members.png        | Bin 0 -> 11249104 bytes
+ web_ttcnpm/images/Cofee.png               | Bin 0 -> 34137 bytes
+ web_ttcnpm/images/Facebook Logo.png       | Bin 0 -> 889 bytes
+ web_ttcnpm/images/Header Background.jpg   | Bin 0 -> 578292 bytes
+ web_ttcnpm/images/Spotify Logo.png        | Bin 0 -> 2995 bytes
+ web_ttcnpm/images/Youtube Logo.png        | Bin 0 -> 2616 bytes
+ web_ttcnpm/images/avatar.png              | Bin 0 -> 3450 bytes
+ web_ttcnpm/images/banh-canh.png           | Bin 0 -> 283626 bytes
+ web_ttcnpm/images/bk-bgr.png              | Bin 0 -> 1477607 bytes
+ web_ttcnpm/images/ca-phe.png              | Bin 0 -> 206669 bytes
+ web_ttcnpm/images/com-suon.png            | Bin 0 -> 270260 bytes
+ web_ttcnpm/images/ga-ran.png              | Bin 0 -> 214803 bytes
+ web_ttcnpm/images/loginbgr.jpg            | Bin 0 -> 1110873 bytes
+ web_ttcnpm/images/logo-BK.png             | Bin 0 -> 85664 bytes
+ web_ttcnpm/images/logo.jpg                | Bin 0 -> 63189 bytes
+ web_ttcnpm/images/mieng-ga.png            | Bin 0 -> 223323 bytes
+ web_ttcnpm/images/nuoc-cam.png            | Bin 0 -> 186389 bytes
+ web_ttcnpm/images/orderDish.js            |   6 +
+ web_ttcnpm/images/pic01.jpg               | Bin 0 -> 328360 bytes
+ web_ttcnpm/images/pic02.jpg               | Bin 0 -> 55629 bytes
+ web_ttcnpm/images/pic03.jpg               | Bin 0 -> 72094 bytes
+ web_ttcnpm/index.php                      | 102 ++++++
+ web_ttcnpm/js/checkLogin.js               |  25 ++
+ web_ttcnpm/js/orderDish.js                |   7 +
+ web_ttcnpm/menuModel.php                  |  35 ++
+ web_ttcnpm/orderCook.html                 |  62 ++++
+ web_ttcnpm/orderCook.js                   |  36 ++
+ web_ttcnpm/purchase.php                   |  28 ++
+ web_ttcnpm/registeration.php              | 140 ++++++++
+ web_ttcnpm/search.html                    |  46 +++
+ web_ttcnpm/store.js                       | 110 ++++++
+ web_ttcnpm/styleLogin.css                 |  59 ++++
+ web_ttcnpm/styles.css                     | 568 ++++++++++++++++++++++++++++++
+ web_ttcnpm/toggleButton.css               |  83 +++++
+ web_ttcnpm/vendor.html                    | 111 ++++++
+ 54 files changed, 2108 insertions(+)
+
+commit 54bf4da31525a797d67b29d387b3e5be648b9468
+Author: Phan Van Truong <60886507+pvantruong@users.noreply.github.com>
+Date:   Fri Jul 10 21:08:15 2020 +0700
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
