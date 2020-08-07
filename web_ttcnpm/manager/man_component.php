@@ -1,10 +1,10 @@
 <?php
 
-function component($dishname, $vendor, $time){
+function component($dishname, $price, $time){
     $element = "
     <tr>
             <td>$dishname</td>
-            <td>$vendor</td>
+            <td>$price</td>
             <td>$time</td>
     </tr>
     ";

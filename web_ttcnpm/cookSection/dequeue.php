@@ -22,8 +22,9 @@ if ($row = mysqli_fetch_assoc($result)) {
         $a = $row['dishname'];
         $b = $row['vendor'];
         $c = $row['priority'];
-        $sql_report = "INSERT INTO report (dishname, vendor, time)
-        VALUES ('$a', '$b', '$c');";
+        $d = $row['price'];
+        $sql_report = "INSERT INTO report (dishname, vendor, price, time)
+        VALUES ('$a', '$b', '$d', '$c');";
         mysqli_query($conn, $sql_report);
     }
     mysqli_query($conn, $sqlchange);

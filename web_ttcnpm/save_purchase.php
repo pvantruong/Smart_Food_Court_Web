@@ -15,8 +15,9 @@ if (isset($_SESSION['cart'])){
                 $cusID = $_SESSION['id'];
                 $priority = date("h:i:s");
                 $vendor = $row['vendor'];
-                $sql_ = "INSERT INTO dishqueue (dishname, cusID, vendor, priority)
-VALUES ( '$dishname', '$cusID', '$vendor', '$priority')";
+                $price = $row['price'];
+                $sql_ = "INSERT INTO dishqueue (dishname, cusID, vendor, price, priority)
+VALUES ( '$dishname', '$cusID', '$vendor', '$price', '$priority')";
                 $result_ = mysqli_query($conn, $sql_);
             }
         }

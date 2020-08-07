@@ -3,9 +3,6 @@ require("conection.php");
 require_once ('man_component.php');
 session_start();
 
-$sql = "SELECT * FROM report";
-$result = mysqli_query($conn, $sql);
-
 
 ?>
 
@@ -47,19 +44,63 @@ $result = mysqli_query($conn, $sql);
         
         <h2>BK Food Court Report</h2>
 
-        <table>
-        <tr>
-            <th>Dishname</th>
-            <th>Vendor</th>
-            <th>Time</th>
-        </tr>
-
+    
         <?php
+            
+            $sql = "SELECT * FROM report ORDER BY vendor ASC";
+            $result = mysqli_query($conn, $sql);
+            $sum = 0;
+            // first vendor
+            $row = mysqli_fetch_assoc($result);
+        ?>
+            <h4>Report of vendor: <?php echo $row['vendor'] ?></h4> 
+            <table>
+                        <tr>
+                            <th>Dishname</th>
+                            <th>Value</th>
+                            <th>Time</th>
+                        </tr>
+            <?php
+
+            $vendor = $row['vendor'];
+            component($row['dishname'], $row['price'], $row['time']);
+            $sum += $row['price'];
+        
+
             while ($row = mysqli_fetch_assoc($result)){
-                component($row['dishname'], $row['vendor'], $row['time']);
+                if($row['vendor'] == $vendor){
+                    component($row['dishname'], $row['price'], $row['time']);
+                    $sum += $row['price'];
+                }
+                else{
+        ?>
+                <tr>
+                    <th>Sum:</th> 
+                    <th><?php echo $sum ?></th>
+                </tr>
+            </table>
+            <br>
+            <h4>Report of vendor: <?php echo $row['vendor'] ?></h4> 
+            <table>
+                        <tr>
+                            <th>Dishname</th>
+                            <th>Value</th>
+                            <th>Time</th>
+                        </tr>
+
+        <?php 
+                    $sum = 0;
+                    component($row['dishname'], $row['price'], $row['time']);
+                    $vendor = $row['vendor'];
+                    $sum += $row['price'];
+                }
             }
         ?>
-        </table>
+                <tr>
+                    <th>Sum:</th> 
+                    <th><?php echo $sum ?></th>
+                </tr>
+        </table>    
      
     
 
