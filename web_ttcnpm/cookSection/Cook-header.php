@@ -10,8 +10,14 @@
                         <a href="orderCook.php" class="notification">
                             <span>Order</span>
                             <span class="bagde"><?php
-                    
-                                $sql = "SELECT * FROM dishqueue";
+                                $cookid = $_SESSION['id'];
+
+                                $sql = "SELECT vendor FROM cooks WHERE id = $cookid";
+                                $result = mysqli_query($conn, $sql);
+                                $row1 = mysqli_fetch_assoc($result);
+                                $vendor = $row1['vendor'];
+                                
+                                $sql = "SELECT * FROM dishqueue WHERE vendor='$vendor'";
                                 $result2 = mysqli_query($conn, $sql);
                                 $count = mysqli_num_rows($result2);
                                 if ($count > 0){

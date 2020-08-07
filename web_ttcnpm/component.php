@@ -1,6 +1,8 @@
 <?php
 
 function component($productname, $productprice, $productimg, $productid, $productvendor){
+
+    
     $element = "
     
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
