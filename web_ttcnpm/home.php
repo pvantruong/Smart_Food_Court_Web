@@ -74,28 +74,7 @@ if (isset($_POST['add'])){
                     ?>
                 </div>
         </div>
-
-<!--
-   <form>
-        <section class="container content-section">
-            <h2 class="section-header">CART</h2>
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-            <div class="cart-items">
-            </div>
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">0 vnd</span>
-            </div>
-            <button class="btn btn-primary btn-purchase" type="submit" onclick="alert('Your order is procesing')" >PURCHASE</button>
-        
-        </section>
-        </form>
--->
-     
+   
         <footer class="main-footer">
             <div class="container main-footer-container">
                 <h3 class="band-name">BK Food Court</h3>

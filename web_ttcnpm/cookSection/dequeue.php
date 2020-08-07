@@ -19,6 +19,12 @@ if ($row = mysqli_fetch_assoc($result)) {
     }
     else if ($row['process'] == 1){
         $sqlchange = "DELETE FROM dishqueue WHERE id = $id";
+        $a = $row['dishname'];
+        $b = $row['vendor'];
+        $c = $row['priority'];
+        $sql_report = "INSERT INTO report (dishname, vendor, time)
+        VALUES ('$a', '$b', '$c');";
+        mysqli_query($conn, $sql_report);
     }
     mysqli_query($conn, $sqlchange);
 }

@@ -67,7 +67,7 @@ else{
             <div class="navbar-nav">
                 <a href="cart.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
-                        <i class="fas fa-shopping-cart"></i> Cart
+                        <i class="fa fa-shopping-cart"></i> Cart
                         <?php
 
                         if (isset($_SESSION['cart'])){
@@ -87,7 +87,7 @@ else{
             <div class="navbar-nav">
                 <a href="search.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
-                        <i class="fa fa-search" aria-hidden="true">SEARCH</i>
+                        <i class="fa fa-search" aria-hidden="true">Search</i>
                     </h5>
                 </a>
             </div>
@@ -97,7 +97,7 @@ else{
             <div class="navbar-nav">
                 <a href="logout.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
-                        <i class="fa fa-sign-out" aria-hidden="true">LOGOUT</i>
+                        <i class="fa fa-sign-out" aria-hidden="true">Logout</i>
                     </h5>
                 </a>
             </div>

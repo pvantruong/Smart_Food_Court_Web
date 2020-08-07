@@ -37,7 +37,7 @@
             <div class="head-display">
                 <img class="logo-BK" src="../images/logo-BK.png">
                 <h1 class="band-name band-name-large">BK Food Court </h1>
-                <h3 class="name-team">Hello, cooker <?php
+                <h3 class="name-team">Hello, cook <?php
                 if(isset($_SESSION['id'])){
                     if( $_SESSION['id'] != 0){
                         echo $_SESSION['name'];

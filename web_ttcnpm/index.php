@@ -99,6 +99,7 @@ span.psw {
 
 <h1 class ="loginForm">Login Form</h1>
 <h4 class="changeAccount" ><a href="./cookSection/cookLogin.php">Login with Cook Account!</a></h4>
+<h4 class="changeAccount" ><a href="./manager/man_index.php">Login with Manager Account!</a></h4>
 <form action="./cusvalid.php" method="post">
   <div class="imgcontainer">
     <img src="images/logo1.jpg" alt="Avatar" class="avatar">
