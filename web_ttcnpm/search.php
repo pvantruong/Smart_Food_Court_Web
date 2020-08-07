@@ -47,7 +47,7 @@
 			<form action="#" method="POST">
 			<h4>Search for the name of dish you want:</h4>
 				<input class="btn" type="text" name="txtSearch" placeholder="Enter your keyword..."/>
-				<input class="btn btn-endanger" type="submit" name="btnSearch" value="Search"/>
+				<input class="btn btn-warning my-3" type="submit" name="btnSearch" value="Search"/>
 			</form>
 			
         </div>
