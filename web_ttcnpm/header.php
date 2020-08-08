@@ -97,7 +97,14 @@ else{
             <div class="navbar-nav">
                 <a href="logout.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
-                        <i class="fa fa-sign-out" aria-hidden="true">Logout</i>
+                        <i class="fa fa-sign-out" aria-hidden="true">
+                        <?php
+                        if(isset($_SESSION['id'])){
+                            echo "Logout";
+                        } else echo "Login";
+                        ?>
+                        </i>
+                        
                     </h5>
                 </a>
             </div>

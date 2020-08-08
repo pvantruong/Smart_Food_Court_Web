@@ -9,7 +9,6 @@ require_once("conection.php");
         <title>Home - BK Food Court</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="../styles.css" />
-        
     </head>
     <body>
         <?php

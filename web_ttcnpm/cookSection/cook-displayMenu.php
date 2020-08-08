@@ -1,8 +1,10 @@
 <?php
 require("conection.php");
+//session_start();
+$vendorr = $_SESSION['vendorr'];
+$sql = "SELECT * FROM menu  WHERE vendor='$vendorr'";
+$result3 = mysqli_query($conn, $sql);
 
-$sql = "SELECT * FROM menu";
-$result = mysqli_query($conn, $sql);
 
 ?>
 
@@ -18,9 +20,9 @@ $result = mysqli_query($conn, $sql);
     <div class="shop-items">
         
             <?php
-            if (mysqli_num_rows($result) > 0) {
+            if (mysqli_num_rows($result3) > 0) {
                     // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
+                    while($row = mysqli_fetch_assoc($result3)) {
                             $name = $row['dishname'];
                             $vendor = $row['vendor'];
                             $price = $row['price'];

@@ -4,8 +4,8 @@ function component($dishname, $price, $time){
     $element = "
     <tr>
             <td>$dishname</td>
-            <td>$price</td>
             <td>$time</td>
+            <td>$price</td>
     </tr>
     ";
     echo $element;

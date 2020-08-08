@@ -5,7 +5,7 @@ require("conection.php");
 $username = isset($_POST['uname']) ? $_POST['uname'] : '';
 $password = isset($_POST['psw']) ? $_POST['psw'] : '';
 
-$sql = "SELECT id, username, name, psw FROM cooks";
+$sql = "SELECT id, username, vendor, name, psw FROM cooks";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -15,6 +15,7 @@ if (mysqli_num_rows($result) > 0) {
             session_start();
             $_SESSION['name'] = $row['name'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['vendorr'] = $row['vendor'];
             exit;
         }
     }

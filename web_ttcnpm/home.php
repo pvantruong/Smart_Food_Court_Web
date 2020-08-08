@@ -11,7 +11,6 @@ if(isset($_POST['add']) != 0 && isset($_SESSION['id']) == 0){
     header("Location: index.php");
     exit;
 }
-
 if (isset($_POST['add'])){
     /// print_r($_POST['product_id']);
     if(isset($_SESSION['cart'])){
@@ -43,6 +42,7 @@ if (isset($_POST['add'])){
         // print_r($_SESSION['cart']);
     }
 }
+
 
 ?>
 

@@ -27,7 +27,7 @@ session_start();
         }
 
         td, th {
-        border: 1px solid #dddddd;
+        border: 2px solid #dddddd;
         text-align: left;
         padding: 8px;
         }
@@ -45,63 +45,44 @@ session_start();
         <h2>BK Food Court Report</h2>
 
     
-        <?php
-            
+        <?php 
             $sql = "SELECT * FROM report ORDER BY vendor ASC";
             $result = mysqli_query($conn, $sql);
             $sum = 0;
-            // first vendor
-            $row = mysqli_fetch_assoc($result);
-        ?>
-            <h4>Report of vendor: <?php echo $row['vendor'] ?></h4> 
-            <table>
-                        <tr>
-                            <th>Dishname</th>
-                            <th>Value</th>
-                            <th>Time</th>
-                        </tr>
-            <?php
-
-            $vendor = $row['vendor'];
-            component($row['dishname'], $row['price'], $row['time']);
-            $sum += $row['price'];
-        
-
+            $temp = NULL;
             while ($row = mysqli_fetch_assoc($result)){
-                if($row['vendor'] == $vendor){
-                    component($row['dishname'], $row['price'], $row['time']);
-                    $sum += $row['price'];
-                }
-                else{
-        ?>
-                <tr>
-                    <th>Sum:</th> 
-                    <th><?php echo $sum ?></th>
-                </tr>
-            </table>
-            <br>
-            <h4>Report of vendor: <?php echo $row['vendor'] ?></h4> 
-            <table>
+                if($temp != $row['vendor']){
+        ?>          
+                    <?php
+                    if($temp != NULL){  ?>
+                        <tr>
+                            <th>Sum:</th> 
+                            <th></th>
+                            <th><?php echo $sum ?></th>
+                        </tr>
+                    </table>
+             <?php  $sum = 0;
+                    }         ?>  
+                    <h4>Report of vendor: <?php echo $row['vendor'] ?></h4> 
+                    <table>
                         <tr>
                             <th>Dishname</th>
-                            <th>Value</th>
                             <th>Time</th>
+                            <th>Value</th>
                         </tr>
-
-        <?php 
-                    $sum = 0;
-                    component($row['dishname'], $row['price'], $row['time']);
-                    $vendor = $row['vendor'];
-                    $sum += $row['price'];
+        <?php
+                    $temp = $row['vendor'];
                 }
+                component($row['dishname'], $row['price'], $row['time']);
+                $sum += $row['price']; 
             }
         ?>
                 <tr>
-                    <th>Sum:</th> 
-                    <th><?php echo $sum ?></th>
-                </tr>
-        </table>    
-     
+                <th>Sum:</th> 
+                <th></th>
+                <th><?php echo $sum ?></th>
+            </tr>
+            
     
 
     </body>
