@@ -1,8 +1,10 @@
 <?php
 header("location:cookHome.php");
 require("conection.php");
+session_start();
+$vendorr = $_SESSION['vendorr'];
 
-$sql = "SELECT id, Avb FROM menu";
+$sql = "SELECT id, Avb FROM menu WHERE vendor = '$vendorr'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
