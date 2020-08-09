@@ -1,10 +1,11 @@
 <?php
 header("location:cookHome.php");
 require("conection.php");
-
+session_start();
+$vendor = $_SESSION['vendorr'];
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
-$vendor = isset($_POST['vendor']) ? $_POST['vendor'] : '';
+
 $price = isset($_POST['price']) ? $_POST['price'] : '';
 $image = "images/no-image.png";
 $avb = 0;

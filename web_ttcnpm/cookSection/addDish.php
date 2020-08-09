@@ -18,8 +18,6 @@
 <form>
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name" placeholder="name of dish"><br>
-  <label for="vendor">Vendor:</label><br>
-  <input type="text" id="vendor" name="vendor" placeholder="vendor of dish"><br>
   <label for="price">Price:</label><br>
   <input type="text" id="price" name="price" placeholder="price of dish"><br><br>
   <button type="submit" formaction="addDishmodel.php" formmethod="post" onclick="alert('Menu changed')" >UPDATE</button>

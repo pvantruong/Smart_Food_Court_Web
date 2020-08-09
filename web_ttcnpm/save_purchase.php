@@ -2,6 +2,7 @@
 header("location:home.php");
 require("conection.php");
 session_start();
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 $sql = "SELECT * FROM menu";
 $result = mysqli_query($conn, $sql);
 if (isset($_SESSION['cart'])){
